@@ -1,0 +1,14 @@
+
+<h1>Create new - Restaurant</h1>
+<%= simple_form_for(@restaurant) do |t| %>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <%= t.input :name %>
+        <%= t.input :address %>
+        <%= t.input :phone_number%>
+        <%= t.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"]%>
+        <%= t.submit%>
+<% end %>
+        <%= link_to 'Back', restaurants_path, class: "btn btn-outline-secondary" %>
+      </div>
+    </div>
